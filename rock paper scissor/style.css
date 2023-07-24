@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgb(142, 36, 36);
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 50px;
+    gap: 25px;
+}
+.button{
+    background-color: goldenrod ;
+    border-radius: 25px 1px 25px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2PX  brightpurple solid;
+    box-shadow: 10px 10px 20px  gold;
+    
+}
+button{
+    padding: 20px;
+     margin: 20PX;
+     background-color: rgb(219, 66, 66);
+     box-shadow:1px 1px 5px red;
+     border-radius: 50px;
+}
+span{
+    color: rgb(250, 253, 153);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.result{
+    font-size: 25px;
+}
+
+div{
+    text-align: center;
+}
+.score{
+    font-size: 20px;
+    
+}

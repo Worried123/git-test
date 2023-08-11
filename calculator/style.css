@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  body {
+    background-color: #161C24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D262E;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .screen {
+    display: block;
+    font-size: 38px;
+    color: #D7E1EC;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    background-color: #28323F;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, 80px);
+    grid-gap: 10px;
+  }
+  
+  .numbers {
+    background-color: #28323F;
+    color: #D7E1EC;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  .tohundred,
+  .negative,
+  .operators {
+    background-color: #694F91;
+    color: #D7E1EC;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .reset {
+    background-color: #4A235A;
+    color: #D7E1EC;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .equal {
+    grid-column: span 2;
+    background-color: #28323F;
+    color: #D7E1EC;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  .tohundred:hover,
+  .negative:hover,
+  .reset:hover,
+  .numbers:hover,
+  .operators:hover,
+  .equal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .plus-minus {
+    background-color: #28323F;
+  }
+  
+  .tohundred {
+    background-color: #694F91;
+  }
+  
+  .show {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #D7E1EC;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .buttons {
+      grid-template-columns: repeat(4, 60px);
+      grid-template-rows: repeat(5, 60px);
+    }
+  
+    .screen {
+      font-size: 32px;
+      height: 60px;
+    }
+  
+    .numbers, .operators, .equal {
+      font-size: 24px;
+    }
+  }

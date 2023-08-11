@@ -12,8 +12,9 @@ const negative =  document.querySelector('.negative')
 const answer = document.querySelector('.answer')
 numbers.forEach(number=>{
 number.addEventListener('click', e=>{
-  show.textContent += number.textContent
+ 
   if (!operator) {
+    
     num1 += number.textContent
     console.log(num1);
     
@@ -25,14 +26,15 @@ number.addEventListener('click', e=>{
    
         }
   answer.textContent = num1
-  })
+  show.textContent += number.textContent  
 })
- equal.addEventListener('click', e=> {
+
 })
 operat.forEach(allOprats =>{
   allOprats.addEventListener('click', e=>{
+    
     if (!(!operator)) {
-      show.value =  num1
+      
       num2 = ''
     }
     operator = allOprats.textContent

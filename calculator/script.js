@@ -22,11 +22,11 @@ number.addEventListener('click', e=>{
     
     num2 += number.textContent
     console.log(num2);
-    num1 =operate(+num1,operator,+num2)
+    
    
         }
   answer.textContent = num1
-  show.textContent += number.textContent  
+  show.value += number.textContent  
 })
 
 })
@@ -34,30 +34,34 @@ operat.forEach(allOprats =>{
   allOprats.addEventListener('click', e=>{
     
     if (!(!operator)) {
-      
+      num1 = operate(+num1, operator ,+num2)
       num2 = ''
     }
     operator = allOprats.textContent
-   show.textContent = operator
+   show.value = operator
+   answer.textContent = num1
 
   })
 })
 reset.addEventListener('click', e=>{
- show.textContent=''
+ show.value=''
  num1 = ''
  num2 = ''
  operator = ''
  answer.textContent = ''
 })
 percentage.addEventListener('click' , e=>{
-show.textContent = num1/100
+show.value = num1/100
 })
 negative.addEventListener('click' , e => {
 num1 = -num1
-show.textContent = num1
+show.value = num1
 })
 equal.addEventListener('click' , e => {
-  show.textContent =  num1
+  
+  answer.textContent = num1
+  show.value =    operate(+num1, operator ,+num2)
+  num1 = operate(+num1, operator ,+num2)
   num2 = ''
 console.log(num1);
 })
@@ -87,7 +91,7 @@ function add(a,b) {
               if(num1 === 0 || num2 === 0){
                 num1 = ''
                 num2 = ''
-                show.textContent = 'eror'
+                show.value = 'eror'
               }else{
                 return  devide(num1,num2)    
               }}

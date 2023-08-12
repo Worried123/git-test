@@ -12,6 +12,7 @@
   }
   
   .main {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,19 +24,19 @@
   }
   
   .screen {
-    display: block;
-    font-size: 38px;
+    font-size: 32px; /* Reduce font size */
     color: #D7E1EC;
     text-align: right;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 100%;
+    margin-bottom: 20px; 
+    padding: 10px; 
+    width: 350px; /* Reduce width */
     height: 80px;
     background-color: #28323F;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
+    outline: none;
+}
   
   .buttons {
     display: grid;
@@ -126,6 +127,7 @@
     .screen {
       font-size: 32px;
       height: 60px;
+      width: 19rem;
     }
   
     .numbers, .operators, .equal {

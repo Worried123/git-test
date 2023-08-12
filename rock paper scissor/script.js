@@ -11,7 +11,6 @@ function computers(params) {
 let loses = 0;
 let draws = 0;
 const score = [wins,loses,draws]
-
 const body = document.body
 const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
@@ -33,8 +32,7 @@ rock.addEventListener('click', e => {
     result.textContent = 'you played rock and computer played scissor so its a win'
     ++score[0]
   }
-   scores.textContent=`wins${score[0]} losses${score[1]} draws${score[2]}`
-console.log(score);
+   scored()
 rounds()
 removeWinAndHelp()
 })
@@ -51,8 +49,7 @@ paper.addEventListener('click', e => {
     result.textContent = 'you played paper and computer played scissor so its a loss'
     ++score[1]
   }
-scores.textContent=`wins${score[0]} losses${score[1]} draws${score[2]}`
-console.log(score);
+scored()
 rounds()
 removeWinAndHelp()
 })
@@ -69,8 +66,7 @@ scissor.addEventListener('click', e => {
     result.textContent = 'you played scissor and computer played scissor so its a draw'
     ++score[2]
   }
- scores.textContent=`wins${score[0]} losses${score[1]} draws${score[2]}`
-console.log(score);
+ scored()
 rounds()
 removeWinAndHelp()
 
@@ -107,3 +103,6 @@ if (score[1] === 1 || score[2] === 1 || score[0] === 1) {
   winner.remove()
   help.remove()
 }}
+function scored(){
+  scores.textContent=`wins${score[0]} losses${score[1]} draws${score[2]}`
+}

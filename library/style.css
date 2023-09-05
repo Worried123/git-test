@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.title {
+  width: 100vw;
+  height: 20vh;
+  background-image: linear-gradient(to top, #00e3ae 0%, #d4fc79 100%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-weight: 600;
+  background-color: rgba(17, 69, 27, 0.35);
+}
+.bookshelf {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 200px 200px 200px;
+  background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+}
+.book{
+    display: flex;
+    border-radius: 20px;
+    border: 3px solid black;
+    transform: translateX(10px);
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20PX;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    width: 200px;
+    height: 200px;
+
+}
+.name{
+    color: whitesmoke;
+    font-size: 25px;
+    transform: translateY(10px);
+}
+.author,.pages{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.add {
+  position: fixed;
+  right: 25px;
+  bottom: 20px;
+  width: 76px;
+  height: 76px;
+  border-radius: 100px;
+  border: none;
+  background-color: #0b4cb5;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.read{
+    padding: 5px;
+    font-size: 15px;
+    width: 70px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+}
+.remove{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(23, 188, 23);
+    padding: 5px;
+    font-size: 15px;
+    width: 70px;
+}
+.login{
+  border: 2px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(15, 224, 95);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+   gap: 20px;
+}
+.loginInput{
+  transform: translatey(40px);
+  padding: 10px;
+  border: 2px solid black;
+  width: 250px;
+  position:relative;
+  left:60px;
+  border-radius: 20px;
+ outline: none;
+ font-size: 20px;
+}
+
+.login-buttons{
+  display: flex;
+  justify-content:center ;
+  gap: 20px;
+  
+}
+.login-button{
+  /* position: relative;
+  padding: 15px; */
+  transform: translatey(60px);
+  padding: 10px;
+  border: 2px solid black;
+  width: 100px;
+  position: relative;
+  
+  border-radius: 20px;
+ outline: none;
+ font-size: 20px;
+}
+.buttons{
+  display: flex;
+  gap: 20px;
+}

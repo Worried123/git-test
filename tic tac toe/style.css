@@ -1,0 +1,47 @@
+body {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:80vh;
+  gap: 20px;
+}
+.center{
+  border: 3px solid black;
+  display: grid;
+  width: 70%;
+  height: 70%;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+}
+.box{
+  border: 1px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 25px;
+}
+.winner{
+  
+  position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(211, 210, 210, 0.5); /* Set your desired background color with an alpha (opacity) value */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  padding: 20px; /* Add padding or content as needed */
+  transition: 1s;}
+  button{
+    display: inline;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    width: 75px;
+    border-radius: 10px;
+  }

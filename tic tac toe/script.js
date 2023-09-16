@@ -24,6 +24,8 @@ _|_|_
 /*
 2. pick a square
 */
+let win  ;
+let lose ;
 const numarr = []
 let numObj = {};
 let symbol = "X";
@@ -49,13 +51,14 @@ const constructGameBoard = () => {
       // fill the box with the current symbol, change the symbol to the oppisite one
       if (symbol === "X") {
         box.textContent = symbol;
-        console.log(numObj.textContent);
+
         numarr.push(i)
         console.log(numarr);
         symbol = 'O'
         
         
       }
+      checkWincondition();
         robotTurn()
       checkWincondition();
      
@@ -82,6 +85,7 @@ const checkWincondition = () => {
     0, 4, 8 diagnol
     2, 4, 6*/
   setTimeout(() => {
+    drawCondition()
     forXsymbol(0, 1, 2)
     forXsymbol(3, 4, 5)
     forXsymbol(6, 7, 8)
@@ -98,15 +102,33 @@ const checkWincondition = () => {
     forOsymbol(2, 5, 8)
     forOsymbol(0, 4, 8)
     forOsymbol(2, 4, 6)
-    
+
   }, 1000);
-};
+  function drawCondition(){
+    if (numarr.length === 9&& win === undefined) {
+      numarr.length = 0
+      symbol = 'X'
+      const xwinner = document.createElement("div");
+      xwinner.classList.add("winner");
+      document.body.append(xwinner);
+      xwinner.textContent = "Its draw";
+      setTimeout(() => {
+        xwinner.remove();
+      }, 3000);
+      for (let i = 0; i < 9; i++) {
+        numObj[`box${i}`].textContent = "";
+      }
+    }}
+  }
+
 function forXsymbol(a, b, c) {
   if (
     numObj[`box${a}`].textContent === "X" &&
     numObj[`box${b}`].textContent === "X" &&
     numObj[`box${c}`].textContent === "X"
   ) {
+    lose = false
+   win = true
     numarr.length = 0
     symbol = 'X'
     const xwinner = document.createElement("div");
@@ -128,6 +150,8 @@ function forOsymbol(a, b, c) {
     numObj[`box${b}`].textContent === "O" &&
     numObj[`box${c}`].textContent === "O"
   ) {
+    win = false
+    lose = true
     numarr.length = 0
     symbol = 'X'
     const xwinner = document.createElement("div");
@@ -166,10 +190,10 @@ function restartButton() {
       }
       
       }while(numObj[`box${Osymbol}`].textContent !== '')
-      numarr.push(Osymbol)
       if (numarr.length !== 9) {
         numObj[`box${Osymbol}`].textContent =symbol
         symbol = 'X'
+        numarr.push(Osymbol)
         
       }else{
         return ;

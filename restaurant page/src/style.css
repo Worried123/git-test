@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'robotic';
+    src: url(Roboto-Black.ttf);
+}
+.content{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+    flex-direction: column;
+}
+body{
+     font-family: 'robotic'; 
+}
+.buttons{
+    margin-top: 10px;
+}
+button{
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid black;
+    margin-inline: 10px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+        background-color: rgba(135, 251, 100, 0.611);
+
+}
+.mainContent{
+    background-color: rgba(11, 76, 0, 0.947);
+    width: 100vw;
+    border: 3px solid black;
+    
+    
+}
+body{
+    background-image: url(pizza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+.homePage{
+    width:99vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+   
+}
+a{
+    color: rgb(31, 210, 31);
+    text-align: center;
+    font-size: 15px;
+}
+.homePageImage{
+    background-image: url(pizza.jpg);
+    width:400px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    border-radius:20px;
+    border: 2px solid black;
+}
+
+.order{
+   background-color: rgb(133, 199, 20);
+}
+.coloredText{
+    font-size: 30px;
+    color: greenyellow;
+    text-align: center;
+    font-weight: 600;
+}
+.titleContext{
+    text-align: center;
+    font-size: 20px;
+}
+.contacts{
+    width: 500px;
+    height: 20vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    transform: translateX(100px);
+    background-color: rgb(100, 215, 17);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contactPage{
+    margin-top: 30px;
+    display: flex;
+  
+    flex-direction: column;
+    gap: 50px;
+    width: 100vw;
+    height: 80vh;
+
+}
+.contactImage1{
+    border: 2px solid black;
+  background-image:  url( frog0.jpg);
+  width: 150px;
+  height:  100px ;
+  background-size: cover;
+  border-radius: 10px;
+ 
+}
+.contactImage2{
+    border: 2px solid black;
+    background-image: url(frog1.jpg);
+    width: 150px;
+    height:  100px ;
+    background-size: cover;
+    border-radius: 10px;
+}
+.contactImage3{
+    border: 2px solid black;
+    background-image: url(frog2.jpg);
+    width: 150px;
+    height:  100px ;
+    background-size: cover;
+    border-radius: 10px;
+}
+.homePageLeft{
+border: 3px solid black;
+border-radius:20px;
+padding: 20px;
+text-align: center;
+}
+.menupage{
+    width: 100vw;
+    height: 40vw;
+     display: grid;
+     grid-template-rows: 300px 300px;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+     justify-items: center;
+}
+.foodBlog{
+ font-size: 20px;
+ border-radius: 10px;
+ border: 1px solid black;
+ width: 300px;
+ height: 200px;
+ flex-direction: column;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.foodImage1{
+    background-image: url(burger.jpg);
+    width: 300px;
+    height:100px;
+    background-size: 300px 100px;
+
+}
+.foodImage2{
+    background-image: url(pizza1.jpg);
+    width: 300px;
+    height:100px;
+    background-size: 300px 100px;
+
+}
+.foodImage3{
+    background-image: url(slushy.jpg);
+    width: 300px;
+    height:100px;
+    background-size: 300px 100px;
+
+}
+.foodImage4{
+    background-image: url(king.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}

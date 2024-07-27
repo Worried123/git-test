@@ -1,12 +1,19 @@
 import project from "./project";
 import todos from "./todo";
 import projectList from "./projectList";
-import { addTOProjectList, CreateProject, removeProject } from "./function";
+import {
+  CreateProject,
+  addToProjectList,
+  removeFromProjectList,
+} from "./function";
 import { createTodos } from "./function";
-let projects = new projectList()
-let  todo =createTodos('meaa','and','done')
-let project1 = CreateProject('a','s',todo)
-projects.addProject(project1)
-console.log(projects);
-projects.removeProject(project1)
-console.log(projects);
+let todo = createTodos("meaa", "and", "done");
+let todo1 = createTodos("me", "and", "you");
+let project1 = CreateProject("s", "s", todo);
+let project2 = CreateProject("d", "d", todo1);
+addToProjectList(project1);
+addToProjectList(project2);
+console.log(projectList);
+
+console.log(projectList);
+removeFromProjectList(project1);

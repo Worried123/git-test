@@ -1,7 +1,6 @@
 import todos from "./todo";
 import project from "./project";
-import ProjectList from "./projectList";
-
+import { projectList } from "./project"
 function createTodos(title, description, checkList) {
   let todo = new todos(title, description, checkList);
   return todo;
@@ -11,13 +10,13 @@ function CreateProject(title, dueDate, Todo) {
   return title;
 }
 function addToProjectList(projectName) {
-  ProjectList.push(projectName);
-  return ProjectList;
+  projectList.list.push(projectName);
+  return projectList;
 }
 function removeFromProjectList(ProjectName) {
-  ProjectList = ProjectList.filter((e) => {
-    return e !== ProjectName;
-  });
+projectList.list = projectList.list.filter(e =>{
+  return e.title !== ProjectName
+})
 }
 export { createTodos, CreateProject, addToProjectList, removeFromProjectList };
 /* function removeFromProjectLust(ProjectName){

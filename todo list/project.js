@@ -1,9 +1,10 @@
 import todos from "./todo";
 class project {
-  constructor(title, dueDate, todo) {
+  constructor(title, dueDate, todo, ) {
     this.dueDate = dueDate;
     this.title = title;
     this.todo = todo;
+    
   }
   writeProjectName(name) {
     this.title = name;
@@ -23,5 +24,9 @@ class project {
   removeTodoFromProject() {
     this.todo = null;
   }
+}
+
+export const projectList = {
+  list: []
 }
 export default project;
